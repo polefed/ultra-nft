@@ -1,0 +1,136 @@
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+// spoiler
+
+.spoiler {
+  flex: 1 1 auto;
+  overflow: hidden;
+  &__switch {
+    display: none;
+    @media (max-width: 768px) {
+      &:checked ~ .spoiler__button {
+        background: var(--color-10);
+        margin-bottom: 24px;
+      }
+      &:checked ~ .spoiler__button:after {
+        transform: translateY(-50%) rotate(45deg);
+      }
+      &:checked ~ .spoiler__content {
+        transform: translateX(0);
+        opacity: 1;
+        max-height: 100vh;
+      }
+    }
+  }
+  &__button {
+    display: block;
+    font: var(--font-5);
+    margin-bottom: 24px;
+    cursor: default;
+    @media (max-width: 768px) {
+      background: var(--color-9);
+      margin: 0;
+      border-radius: 10px;
+      padding: 10px 30px 10px 10px;
+      transition: var(--transition-1);
+      position: relative;
+      &:after {
+        position: absolute;
+        content: "";
+        background-color: white;
+        clip-path: var(--cross-5);
+        width: 15px;
+        height: 15px;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: transform var(--transition-2);
+      }
+    }
+  }
+  &__content {
+    @media (max-width: 768px) {
+      transition: var(--transition-2);
+      transform: translateX(-100%);
+      opacity: 0;
+      max-height: 0;
+    }
+  }
+ li {
+    color: var(--color-2);
+    font: var(--font-3);
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  a {
+    position: relative;
+    @media (any-hover: hover) {
+      background-image: linear-gradient(var(--color-10), var(--color-10));
+      background-size: 0 2px, auto;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      transition: background-size var(--transition-1), color var(--transition-1);
+      @media (any-hover: hover) {
+        &:hover {
+          background-size: 100% 2px, auto;
+          color: var(--color-10);
+        }
+      }
+    }
+  }
+}
+
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+// spoilers ( js )
+
+// .js-spoiler {
+//   overflow: hidden;
+//   &__button {
+//     cursor: default;
+//     @media (max-width: 768px) {
+//       background-color: gray;
+//       color: white;
+//       border-radius: 10px;
+//       padding: 10px 30px 10px 10px;
+//       position: relative;
+//       &:after {
+//         position: absolute;
+//         content: "";
+//         background-color: white;
+//         clip-path: var(--cross-5);
+//         width: 10px;
+//         height: 10px;
+//         right: 10px;
+//         top: 50%;
+//         transform: translateY(-50%);
+//         transition: transform var(--transition-2);
+//       }
+//     }
+//     @media (max-width: 768px) {
+//       transition: var(--transition-2);
+//       &.__active {
+//         background-color: gold;
+//         &:after {
+//           transform: translateY(-50%) rotate(45deg);
+//         }
+//       }
+//     }
+//   }
+//   &__content {
+//     @media (max-width: 768px) {
+//       transition: var(--transition-2);
+//       transform: translateX(-100%);
+//       opacity: 0;
+//       max-height: 0;
+//       &.__active {
+//         transform: translateX(0);
+//         opacity: 1;
+//         max-height: 100vh;
+//       }
+//     }
+//   }
+// }

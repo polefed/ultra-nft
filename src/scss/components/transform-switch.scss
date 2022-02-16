@@ -1,0 +1,138 @@
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+//  transform switch
+
+.transform-switch {
+  display: none;
+  @media (max-width: 1200px) {
+    &:checked ~ .section__top .transform-navigation .transform-navigation__button {
+    }
+  }
+}
+
+
+.transform-switch:nth-child(1):checked ~ .section__top .transform-navigation label:nth-child(1),
+.transform-switch:nth-child(2):checked ~ .section__top .transform-navigation label:nth-child(2) {
+  background-color: var(--color-10);
+}
+
+
+#transformToday1 {
+  @media (max-width: 1200px) {
+    &:checked ~ .today {
+      padding-bottom: 10px;
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      &::-webkit-scrollbar {
+        background-color: var(--color-8);
+        border-radius: 10px;
+        height: 10px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: var(--color-3);
+        border-radius: 10px;
+        @media (any-hover: hover) {
+          &:hover {
+            background: var(--color-10);
+          }
+        }
+      }
+    }
+    &:checked ~ .today .today__item {
+      flex: 0 0 calc(50% - 10px);
+      // flex: 0 0 370px;
+      scroll-snap-align: center;
+    }
+  }
+  @media (max-width: 768px) {
+    &:checked ~ .today .today__item {
+      flex: 0 0 100%;
+    }
+  }
+}
+
+#transformTop1 {
+  @media (max-width: 1200px) {
+    &:checked ~ .top {
+      padding-bottom: 10px;
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      &::-webkit-scrollbar {
+        background-color: var(--color-8);
+        border-radius: 10px;
+        height: 10px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: var(--color-3);
+        border-radius: 10px;
+        @media (any-hover: hover) {
+          &:hover {
+            background: var(--color-10);
+          }
+        }
+      }
+    }
+    &:checked ~ .top .top__item {
+      // flex: 0 0 300px;
+      flex: 0 0 calc(50% - 10px);
+      scroll-snap-align: center;
+    }
+  }
+  // @media (max-width: 480px) {
+  //   &:checked ~ .top .top__item {
+  //     flex: 0 0 100%;
+  //   }
+  // }
+  @media (max-width: 480px) {
+    &:checked ~ .top .top__item {
+      flex: 0 0 100%;
+    }
+  }
+}
+
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+
+.transform-navigation {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  @media (min-width: 1201px) {
+    display: none;
+  }
+ label {
+    width: 6rem;
+    height: 6rem;
+    background-color: var(--color-2);
+    border-radius: 10px;
+    transition: var(--transition-2);
+
+    position: relative;
+    &:before {
+      position: absolute;
+      content: "";
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color: var(--color-1);
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+    }
+  }
+  label:nth-child(1) {
+    &:before {
+      clip-path: polygon(0 0, 0% 100%, 100% 50%);
+    }
+  }
+  label:nth-child(2) {
+    &:before {
+      clip-path: polygon(0 0, 50% 100%, 100% 0);
+    }
+  }
+}

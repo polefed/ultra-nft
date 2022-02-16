@@ -1,0 +1,61 @@
+<div class="filter">
+
+  <input id="filterSwitchAll" class="filter__switch" name="filter" type="radio" checked>
+  <input id="filterSwitch1" class="filter__switch" name="filter" type="radio">
+  <input id="filterSwitch2" class="filter__switch" name="filter" type="radio">
+  <input id="filterSwitch3" class="filter__switch" name="filter" type="radio">
+  <input id="filterSwitch4" class="filter__switch" name="filter" type="radio">
+  <input id="filterSwitch5" class="filter__switch" name="filter" type="radio">
+  <input id="filterDropSwitch" type="checkbox">
+  <input id="transformSwitch1" class="transform-switch" type="radio" name="transformSwitch" checked>
+  <input id="transformSwitch2" class="transform-switch" type="radio" name="transformSwitch">
+
+  <div class="filter__navigation">
+    <label class="filter-drop-button" for="filterDropSwitch">Choose a category</label>
+    <label class="filter__navigation-button filter__navigation-all" data-display='' for="filterSwitchAll">All</label>
+    <label class="filter__navigation-button filter__navigation-button-1" data-display='' for="filterSwitch1">Category 1</label>
+    <label class="filter__navigation-button filter__navigation-button-2" data-display='' for="filterSwitch2">Category 2</label>
+    <label class="filter__navigation-button filter__navigation-button-3" data-display='' for="filterSwitch3">Category 3</label>
+    <label class="filter__navigation-button filter__navigation-button-4" data-display='' for="filterSwitch4">Category 4</label>
+    <label class="filter__navigation-button filter__navigation-button-4" data-display='none' for="filterSwitch5">Category 5</label>
+  </div>
+
+  <div class="transform-navigation">
+    <label class="transform-navigation__button transform-navigation__button-1" for="transformSwitch1"></label>
+    <label class="transform-navigation__button transform-navigation__button-2" for="transformSwitch2"></label>
+  </div>
+
+  <div class="filter__content">
+    <a class="filter__content-item filter__content-item-1"  href="card.html" target="_blank" >Content 1</a>
+    <a class="filter__content-item filter__content-item-2"  href="card.html" target="_blank" >Content 2</a>
+    <a class="filter__content-item filter__content-item-3"  href="card.html" target="_blank" >Content 3</a>
+    <a class="filter__content-item filter__content-item-1"  href="card.html" target="_blank" >Content 1</a>
+    <a class="filter__content-item filter__content-item-4"  href="card.html" target="_blank" >Content 4</a>
+    <a class="filter__content-item filter__content-item-3"  href="card.html" target="_blank" >Content 3</a>
+    <a class="filter__content-item filter__content-item-1"  href="card.html" target="_blank" >Content 1</a>
+    <a class="filter__content-item filter__content-item-4"  href="card.html" target="_blank" >Content 4</a>
+    <a class="filter__content-item filter__content-item-5"  href="card.html" target="_blank" >Content 5</a>
+  </div>
+</div>
+
+<div class="js-filter">
+  <div class="js-filter__navigation">
+    <button class="js-filter__navigation-button __active" data-filter="all">All</button>
+    <button class="js-filter__navigation-button" data-filter=".js-filter__content-item-1">Category 1</button>
+    <button class="js-filter__navigation-button" data-filter=".js-filter__content-item-2">Category 2</button>
+    <button class="js-filter__navigation-button" data-filter=".js-filter__content-item-3">Category 3</button>
+    <button class="js-filter__navigation-button" data-filter=".js-filter__content-item-4">Category 4</button>
+  </div>
+  <div class="js-filter__content">
+    <div class="js-filter__content-item js-filter__content-item-1">Content 1</div>
+    <div class="js-filter__content-item js-filter__content-item-2">Content 2</div>
+    <div class="js-filter__content-item js-filter__content-item-3">Content 3</div>
+    <div class="js-filter__content-item js-filter__content-item-1">Content 4</div>
+    <div class="js-filter__content-item js-filter__content-item-4">Content 5</div>
+    <div class="js-filter__content-item js-filter__content-item-5">Content 6</div>
+    <div class="js-filter__content-item js-filter__content-item-3">Content 7</div>
+    <div class="js-filter__content-item js-filter__content-item-1">Content 8</div>
+    <div class="js-filter__content-item js-filter__content-item-4">Content 9</div>
+    <div class="js-filter__content-item js-filter__content-item-4">Content 10</div>
+  </div>
+</div>

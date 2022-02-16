@@ -1,0 +1,47 @@
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+// toggles
+
+.toggle {
+  position: relative;
+  &:checked {
+    z-index: 10;
+  }
+  &:checked ~ .toggle-element {
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+#userSwitch:checked ~ .user-overlay,
+#searchSwitch:checked ~ .search-overlay {
+  // z-index: 9;
+  // opacity: 1;
+  // visibility: visible;
+}
+.toggle-element {
+  position: absolute;
+  top: 100%;
+  right: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0, -100%);
+  transition: opacity var(--transition-2), transform var(--transition-2);
+}
+.toggle-overlay {
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 200vw;
+  height: 200vh;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-2);
+  background-color: rgba(0, 0, 0, 0.5);
+  // cursor: default;
+  @media (min-width:1201px) {
+    display: none;
+  }
+}

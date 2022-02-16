@@ -1,0 +1,379 @@
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+// filter switch
+
+#filterSwitch1:checked ~ .filter__navigation .filter__navigation-button-1,
+#filterSwitch2:checked ~ .filter__navigation .filter__navigation-button-2,
+#filterSwitch3:checked ~ .filter__navigation .filter__navigation-button-3,
+#filterSwitch4:checked ~ .filter__navigation .filter__navigation-button-4,
+#filterSwitchAll:checked ~ .filter__navigation .filter__navigation-all {
+  background-color: brown;
+  cursor: default;
+  @media (max-width: 768px) {
+    opacity: 1;
+    visibility: visible;
+    max-height: 100vh;
+    padding: 10px;
+  }
+}
+
+#filterSwitch1:checked ~ .filter__content .filter__content-item-1,
+#filterSwitch2:checked ~ .filter__content .filter__content-item-2,
+#filterSwitch3:checked ~ .filter__content .filter__content-item-3,
+#filterSwitch4:checked ~ .filter__content .filter__content-item-4,
+#filterSwitchAll:checked ~ .filter__content .filter__content-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#filterSwitchAll:checked ~ .filter__content .filter__content-item[data-display='none'] {
+  display: none;
+}
+
+#filterDropSwitch {
+  display: none;
+  &:checked ~ .filter__navigation .filter-drop-button {
+    background-color: coral;
+    color: white;
+    opacity: 1;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: orange;
+      }
+    }
+  }
+  &:checked ~ .filter__navigation .filter-drop-button:after {
+    transform: translateY(-50%) rotate(180deg);
+  }
+  &:checked ~ .filter__navigation .filter__navigation-button {
+    opacity: 1;
+    visibility: visible;
+    max-height: 100vh;
+    padding: 10px;
+    &:not(:first-child) {
+      margin-top: 5px;
+    }
+    position: relative;
+  }
+}
+
+.filter-drop-button {
+  display: block;
+  transition: var(--transition-2);
+  color: transparent;
+  padding: 10px 30px 10px 10px;
+  border-radius: 10px;
+  position: relative;
+  z-index: 10;
+  &:after {
+    position: absolute;
+    content: "";
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    clip-path: polygon(0 0, 50% 100%, 100% 0);
+    background-color: white;
+    transition: var(--transition-2);
+  }
+  @media (min-width: 769px) {
+    display: none;
+  }
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: orange;
+      color: white;
+    }
+  }
+  @media (max-width: 480px) {
+    flex: 1 1 100%;
+  }
+}
+
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+// filter
+
+.filter {
+  max-width: 500px;
+  padding: 0 10px;
+  margin: 50px auto;
+  display: flex;
+  @media (min-width: 769px) { 
+  flex-direction: column;
+  }
+  // @media (max-width: 768px) {
+  //   display: grid;
+  //   grid-template-columns: repeat(2, 1fr);
+  // }
+  // @media (max-width: 480px) {
+  //   grid-template-columns: repeat(1, 1fr);
+  //   display: flex;
+  //   flex-direction: column;
+  // }
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+  }
+
+  gap: 5px;
+  &__switch {
+    display: none;
+  }
+  &__navigation {
+    background-color: white;
+    border-radius: 10px;
+    @media (min-width: 769px) {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    position: relative;
+    @media (max-width: 768px) {
+      flex: 1 1 auto;
+      position: sticky;
+      top: 5px;
+    }
+  }
+  &__navigation-button {
+    display: block;
+    position: relative;
+    padding: 10px;
+    background-color: gray;
+    color: white;
+    border-radius: 10px;
+    transition: var(--transition-2);
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: red;
+      }
+    }
+    @media (max-width: 768px) {
+      opacity: 0;
+      visibility: hidden;
+      max-height: 0;
+      padding: 0;
+      
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 0 10px;
+    }
+  }
+  &__content {
+    // @media (min-width: 481px) {
+    //   grid-column: span 2;
+    // }
+    display: grid;
+    gap: 10px;
+    transition: var(--transition-2);
+    @media (min-width: 769px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 768px) {
+      flex: 1 1 100%;
+    }
+
+    overflow: hidden;
+  }
+  &__content-item {
+    display: none;
+    background-color: gray;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    height: 200px;
+    // animation: filterAnimation 0.6s ease-in-out forwards;
+  }
+}
+
+// @keyframes filterAnimation {
+//   0% {
+//       transform: translateX(-100%) scale(0);
+//   }
+//   100% {
+//       transform: translateX(0) scale(1);
+//   }
+// }
+
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+// filter transform switch
+
+.transform-switch {
+  display: none;
+}
+#transformSwitch1:checked
+  ~ .transform-navigation
+  .transform-navigation__button-1,
+#transformSwitch2:checked
+  ~ .transform-navigation
+  .transform-navigation__button-2 {
+  background-color: brown;
+  cursor: default;
+}
+
+#transformSwitch1 {
+  @media (max-width: 768px) {
+    &:checked ~ .filter__content {
+      display: flex;
+      overflow-x: auto;
+      padding: 0 0 5px 0;
+      scroll-snap-type: x mandatory;
+      &::-webkit-scrollbar {
+        background-color: gray;
+        border-radius: 10px;
+        height: 10px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: brown;
+        border-radius: 10px;
+        @media (any-hover: hover) {
+          &:hover {
+            background-color: red;
+          }
+        }
+      }
+    }
+    &:checked ~ .filter__content .filter__content-item {
+      flex: 0 0 100%;
+      scroll-snap-align: center;
+    }
+  }
+}
+
+
+.transform-navigation {
+  @media (min-width: 769px) {
+    display: none;
+  }
+  @media (max-width: 768px) {
+    flex: 0 0 65px;
+  }
+  align-self: start;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: sticky;
+  top: 5px;
+
+  &__button {
+    flex: 0 1 50%;
+    height: 30px;
+    background-color: gray;
+    border-radius: 10px;
+    transition: var(--transition-2);
+    transition: background-color var(--transition-2);
+    @media (any-hover: hover) {
+    &:hover {
+    background-color: red;
+    }
+    }
+    position: relative;
+    &:before {
+      position: absolute;
+      content: "";
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      width: 8px;
+      height: 8px;
+    }
+  }
+  &__button-1 {
+    &:before {
+      clip-path: polygon(0 0, 0% 100%, 100% 50%);
+    }
+  }
+  &__button-2 {
+    &:before {
+      clip-path: polygon(0 0, 50% 100%, 100% 0);
+    }
+  }
+}
+
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+// filter ( js )
+
+.js-filter {
+  max-width: 500px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  display: none;
+  &__navigation {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  &__navigation-button {
+    position: relative;
+    padding: 10px;
+    background-color: gray;
+    color: white;
+    border-radius: 10px;
+    transition: var(--transition-2);
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: yellow;
+      }
+    }
+    &.__active {
+      background-color: gold;
+    }
+  }
+  &__content {
+    display: grid;
+    gap: 10px;
+    transition: var(--transition-2);
+    @media (min-width: 769px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    overflow: hidden;
+  }
+  &__content-item {
+    // display: none;
+    background-color: gray;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    height: 200px;
+  }
+}
+
+.anime {
+  transform: scale(0);
+  opacity: 0;
+}
+.hide {
+  display: none;
+  // animation: hideS 2s ease-in-out forwards;
+}
+@keyframes hideS {
+  0% {
+    visibility: visible;
+    height: 200px;
+  }
+  100% {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    max-width: 0;
+    font-style: 0;
+    margin: 0;
+  }
+}

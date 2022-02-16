@@ -1,0 +1,294 @@
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+// tabs switch
+
+// #tabsSwitch1:checked ~ .tabs__slider .tabs__slider-title-1,
+// #tabsSwitch2:checked ~ .tabs__slider .tabs__slider-title-2,
+// #tabsSwitch3:checked ~ .tabs__slider .tabs__slider-title-3,
+// #tabsSwitch4:checked ~ .tabs__slider .tabs__slider-title-4,
+// #tabsSwitch5:checked ~ .tabs__slider .tabs__slider-title-5 {
+//   display: block;
+// }
+
+#tabsSwitch1:checked ~ .tabs__navigation .tabs__navigation-button-1,
+#tabsSwitch2:checked ~ .tabs__navigation .tabs__navigation-button-2,
+#tabsSwitch3:checked ~ .tabs__navigation .tabs__navigation-button-3,
+#tabsSwitch4:checked ~ .tabs__navigation .tabs__navigation-button-4,
+#tabsSwitch5:checked ~ .tabs__navigation .tabs__navigation-button-5 {
+  cursor: default;
+  background-color: brown;
+  svg {
+    path {
+      fill: white;
+    }
+  }
+
+  @media (max-width: 768px) {
+    opacity: 1;
+    visibility: visible;
+    max-height: 100vh;
+    padding: 10px;
+  }
+
+}
+
+#tabsSwitch1:checked ~ .tabs__content .tabs__content-item-1,
+#tabsSwitch2:checked ~ .tabs__content .tabs__content-item-2,
+#tabsSwitch3:checked ~ .tabs__content .tabs__content-item-3,
+#tabsSwitch4:checked ~ .tabs__content .tabs__content-item-4,
+#tabsSwitch5:checked ~ .tabs__content .tabs__content-item-5 {
+  opacity: 1;
+  max-height: 100vh;
+  transform: translateX(0);
+  padding: 10px;
+}
+
+#tabsDropSwitch {
+  display: none;
+  &:checked ~ .tabs-drop-button {
+    background-color: coral;
+    color: white;
+    opacity: 1;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: orange;
+      }
+    }
+  }
+  &:checked ~ .tabs-drop-button:after {
+    transform: translateY(-50%) rotate(180deg);
+  }
+  &:checked ~ .tabs__navigation {
+    position: relative;
+    padding: 0;
+  }
+  &:checked ~ .tabs__navigation .tabs__navigation-button {
+    opacity: 1;
+    visibility: visible;
+    max-height: 100vh;
+    padding: 10px;
+    position: relative;
+    z-index: 10;
+    &:not(:first-child) {
+      margin-top: 5px;
+    }
+  }
+}
+
+.tabs-drop-button {
+  display: block;
+  padding: 10px 30px 10px 10px;
+  transition: var(--transition-2);
+  color: transparent;
+  border-radius: 10px;
+  position: relative;
+  z-index: 10;
+  &:after {
+    position: absolute;
+    content: "";
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    clip-path: polygon(0 0, 50% 100%, 100% 0);
+    background-color: gainsboro;
+    transition: var(--transition-2);
+  }
+  @media (min-width: 769px) {
+    display: none;
+  }
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: orange;
+      color: white;
+    }
+  }
+}
+
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+// tabs
+
+.tabs {
+  max-width: 500px;
+  padding: 0 10px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: relative;
+
+
+  &__switch {
+    display: none;
+  }
+
+  // tabs slider
+
+  // &__slider {
+  // }
+  // &__slider-title {
+  //   display: none;
+  //   padding: 10px;
+  //   border-radius: 10px;
+  //   text-align: center;
+  //   background-color: brown;
+  //   color: white;
+  //   transition: var(--transition-2);
+  // }
+
+  // navigation
+
+  &__navigation {
+    @media (min-width: 769px) {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    @media (max-width: 768px) {
+      // position: relative;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 0 10px;
+      transition: top var(--transition-2);
+    }
+
+  }
+  &__navigation-button {
+    display: block;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    color: white;
+    transition: var(--transition-2);
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: red;
+      }
+    }
+    @media (max-width: 768px) {
+      opacity: 0;
+      visibility: hidden;
+      max-height: 0;
+      padding: 0;
+      // transform: translateY(-100%);
+      // position: absolute;
+      // top: 0;
+      // left: 0;
+      // width: 100%;
+      // transition: var(--transition-2);
+    }
+
+  }
+
+  &__content {
+    overflow: hidden;
+  }
+  &__content-item {
+    background-color: gray;
+    color: white;
+    border-radius: 10px;
+    opacity: 0;
+    max-height: 0;
+    transform: translateX(-100%);
+    transition: var(--transition-2);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+// tabs ( js )
+
+.js-tabs {
+  max-width: 500px;
+  padding: 0 10px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5px;
+  &__navigation {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    overflow-x: auto;
+    padding: 0 0 2.5px 0;
+    &::-webkit-scrollbar {
+      background-color: gray;
+      border-radius: 10px;
+      height: 2.5px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: gold;
+      border-radius: 10px;
+    }
+  }
+  &__navigation-button {
+    white-space: nowrap;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    color: white;
+    transition: var(--transition-2);
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: yellow;
+      }
+    }
+    &.__active {
+      background-color: gold;
+      cursor: default;
+      @media (any-hover: hover) {
+        &:hover {
+          background-color: gold;
+        }
+      }
+    }
+  }
+  &__content {
+    overflow: hidden;
+  }
+  &__content-item {
+    background-color: gray;
+    color: white;
+    border-radius: 10px;
+    opacity: 0;
+    max-height: 0;
+    transform: translateX(-100%);
+    transition: var(--transition-2);
+    &.__active {
+      opacity: 1;
+      max-height: 100vh;
+      transform: translateX(0);
+      padding: 10px;
+    }
+  }
+}

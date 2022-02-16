@@ -1,0 +1,92 @@
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+// variables
+
+:root {
+
+  //        Light                    300    
+  //        Regular (Normal)         400    
+  //        Medium                   500    
+  //        Semi-bold                600    
+  //        Bold                     700    
+  //        Extra-bold               800    
+  //        Black                    900    
+
+  // font
+  --font-1: 400 16px / calc(24 / 16 * 100%) "Urbanist";
+  --font-2: 700 16px / calc(24 / 16 * 100%) "Urbanist";
+  --font-3: 700 14px / calc(18 / 14 * 100%) "Urbanist";
+  --font-4: 700 24px / calc(32 / 24 * 100%) "Urbanist";
+  --font-5: 400 20px / calc(30 / 20 * 100%) "Urbanist";
+  --font-6: 700 20px / calc(30 / 20 * 100%) "Urbanist";
+  --font-7: 400 12px / calc(16 / 12 * 100%) "Urbanist";
+  --font-8: 700 6.4rem / calc(88 / 64 * 100%) "Urbanist";
+  --font-9: 700 3.2rem / calc(48 / 32 * 100%) "Urbanist";
+  --font-10: 700 4.8rem / calc(64 / 48 * 100%) "Urbanist";
+  @media (max-width: 992px) {
+    --font-6: 700 16px / calc(30 / 16 * 100%) "Urbanist";
+  }
+
+  // transition
+  --transition-1: 0.3s;
+  --transition-2: 0.5s;
+
+  // background
+  --background-1: center/cover no-repeat;
+  // --background-2: center/cover fixed;
+  // --background-3: right 5px top 50%/2rem no-repeat;
+
+  // --spoilerMedia: 992px;
+
+  // color
+  --color-1: #FFFFFF;
+  --color-2: #8393AF;
+  --color-3: linear-gradient(207.67deg, #FDAE8F 3.43%, #FD1C68 104.7%);
+  --color-4: #3C485D;
+  --color-5: #F2B4B0;
+  --color-6: linear-gradient(75.96deg, #FFC83A 13.64%, #FF008A 46.53%, #6100FF 78.88%);
+  --color-7: #F6FDE2;
+  --color-8: #E2F3FE;
+  --color-9: linear-gradient(207.67deg, #23D3A4 3.43%, #5B49CF 104.7%);
+  --color-10: #DC5683;
+  --color-11: #FEECE5;
+  --color-12: #030812;
+
+  // clip path
+  --triangle: polygon(0 0, 50% 100%, 100% 0);
+  --cross-5: polygon(0 45%, 45% 45%, 45% 0, 55% 0, 55% 45%, 100% 45%, 100% 55%, 55% 55%, 55% 100%, 45% 100%, 45% 55%, 0 55%);
+
+  // cross
+  --cross: linear-gradient(45deg, var(--cross-color-2) 45%, var(--cross-color-1) 46%, var(--cross-color-1) 55%, var(--cross-color-2) 56%),
+          linear-gradient(-45deg, var(--cross-color-2) 45%, var(--cross-color-1) 46%, var(--cross-color-1) 55%, var(--cross-color-2) 56%);
+  --cross-color-1: var(--color-1);
+  --cross-color-2: transparent;
+
+   // plus
+  // --plus: linear-gradient(0deg, var(--plus-color-2) 45%, var(--plus-color-1) 46%, 
+  //                                 var(--plus-color-1) 55%, var(--plus-color-2) 56%),
+  //         linear-gradient(90deg, var(--plus-color-2) 45%, var(--plus-color-1) 46%,
+  //                                 var(--plus-color-1) 55%, var(--plus-color-2) 56%);
+  // --plus-color-1: gold;
+  // --plus-color-2: transparent;
+
+  // minus
+  // --minus: linear-gradient(0deg, var(--minus-color-2) 45%, var(--minus-color-1) 46%, var(--minus-color-1) 55%, var(--minus-color-2) 56%);
+  // --minus-color-1: gold;
+  // --minus-color-2: transparent;
+
+   // slider
+   --sliderSlidesPerView: 4;
+   @media (max-width: 1536px) {
+     --sliderSlidesPerView: 3;
+   }
+   @media (max-width: 1200px) {
+     --sliderSlidesPerView: 2;
+   }
+   @media (max-width: 480px) {
+    --sliderSlidesPerView: 1;
+  }
+}
+
+// :root.dark-theme {}

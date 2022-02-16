@@ -1,0 +1,221 @@
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+// user
+
+#userSwitch {
+  display: none;
+  &:checked ~ .user-button {
+    z-index: 10;
+  }
+  &:checked ~ .authorization {
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    transform: translate(-50%, 0);
+  }
+  &:checked ~ .user-overlay {
+    background-color: rgba(#000, 0.9);
+  }
+}
+.user-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: brown;
+  &__image {
+    width: 30px;
+    height: 30px;
+    border: 2px solid brown;
+    border-radius: 50%;
+  }
+  &__text {
+  }
+}
+
+// authorization
+
+.authorization {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 400px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translate(-50%, -100%);
+  transition: opacity var(--transition-2), transform var(--transition-2);
+  background: #ffffff;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+  @media (max-width: 480px) {
+    width: 100%;
+  }
+  &__remember {
+    animation: filterAnimation 0.6s ease-in-out forwards;
+  }
+  &__remember-text {
+    padding: 22px 30px;
+    background-color: gainsboro;
+  }
+  &__remember-title {
+    color: brown;
+    margin: 24px 0 20px 0;
+    text-align: center;
+  }
+
+  &__remember-button {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    color: brown;
+    display: none;
+  }
+  &__return-button {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    color: brown;
+  }
+
+  &__switch {
+    display: none;
+  }
+  &__navigation {
+    // display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 3rem 3rem 0 3rem;
+    margin-bottom: 24px;
+    min-height: 36px;
+    display: none;
+  }
+  &__navigation-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    color: white;
+    background-color: gray;
+    border-radius: 5px;
+    transition: background-color var(--transition-1);
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: gray;
+      }
+    }
+  }
+  &__content {
+    display: none;
+  }
+  &__content-item {
+    transition: var(--transition-1);
+    display: none;
+  }
+  #filterLogin:checked
+    ~ .authorization__navigation
+    .authorization__navigation-button-1,
+  #filterRegistration:checked
+    ~ .authorization__navigation
+    .authorization__navigation-button-2 {
+    background-color: brown;
+  }
+  #filterLogin:checked ~ .authorization__content .authorization-login,
+  #filterRegistration:checked
+    ~ .authorization__content
+    .authorization-registration {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: filterAnimation 0.6s ease-in-out forwards;
+  }
+  #filterRegistration:checked ~ .authorization__remember-button {
+    display: none;
+  }
+}
+
+.user-overlay {
+}
+
+.authorization-login {
+}
+
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+// authorization form
+
+.authorization-form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 3rem 3rem 3rem;
+
+  &__label {
+    margin-bottom: 5px;
+  }
+  &__label-symbol {
+    color: red;
+  }
+  &__input {
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.24);
+    border-radius: 5px;
+    height: 36px;
+    padding: 5px 10px;
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+  &__confirm {
+    margin-top: 24px;
+  }
+  &__confirm-checkbox {
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border: 2px solid black;
+    &:checked {
+      background: url(https://via.placeholder.com/120) center/cover no-repeat;
+    }
+  }
+  &__confirm-text {
+  }
+  &__submit {
+    align-self: center;
+    margin-top: 26px;
+    background-color: #c4c4c4;
+    padding: 11px 22px;
+    border-radius: 5px;
+    color: #ffffff;
+  }
+}
+
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+// remember password
+
+#rememberPasswordSwitch {
+  display: none;
+  &:checked ~ .authorization__content {
+    display: block;
+  }
+  &:checked ~ .authorization__navigation {
+    display: grid;
+  }
+  &:checked ~ .authorization__remember {
+    display: none;
+  }
+  &:checked ~ .authorization__remember-button {
+    display: block;
+  }
+  &:checked ~ .authorization__return-button {
+    display: none;
+  }
+}
+#authorizationReturnSwitch {
+  display: none;
+}

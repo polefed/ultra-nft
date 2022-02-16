@@ -1,0 +1,136 @@
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+// choice switch
+
+#choiceSwitch1:checked ~ .choice__select .choice__select-option-1,
+#choiceSwitch2:checked ~ .choice__select .choice__select-option-2,
+#choiceSwitch3:checked ~ .choice__select .choice__select-option-3,
+#choiceSwitch4:checked ~ .choice__select .choice__select-option-4,
+#choiceSwitch5:checked ~ .choice__select .choice__select-option-5 {
+  cursor: default;
+  background-color: brown;
+  svg {
+    path {
+      fill: white;
+    }
+  }
+  opacity: 1;
+  visibility: visible;
+  max-height: 100vh;
+  padding: 10px;
+}
+
+#choiceDropSwitch {
+  display: none;
+  &:checked ~ .choice-drop-button {
+    background-color: coral;
+    color: white;
+    opacity: 1;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: orange;
+      }
+    }
+  }
+  &:checked ~ .choice-drop-button:after {
+    transform: translateY(-50%) rotate(180deg);
+  }
+  &:checked ~ .choice__select {
+    top: calc(100% + 5px);
+  }
+  &:checked ~ .choice__select .choice__select-option {
+    position: relative;
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+    max-height: 100vh;
+    padding: 10px;
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+  &:checked ~ .choice-overlay {
+    z-index: 9;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.choice-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 200vw;
+  height: 200vh;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-2), visibility var(--transition-2);
+  background-color: rgba(#000, 0.8);
+}
+
+.choice-drop-button {
+  display: block;
+  padding: 10px 30px 10px 10px;
+  color: transparent;
+  border-radius: 10px;
+  transition: opacity var(--transition-2), background-color var(--transition-2),
+    color var(--transition-2);
+  position: relative;
+  z-index: 10;
+  &:after {
+    position: absolute;
+    z-index: 10;
+    content: "";
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    clip-path: polygon(0 0, 50% 100%, 100% 0);
+    background-color: white;
+    transition: transform var(--transition-2);
+  }
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: orange;
+      color: white;
+    }
+  }
+}
+
+// choice
+
+.choice {
+  max-width: 200px;
+  margin: 20px auto;
+  position: relative;
+
+  &__switch {
+    display: none;
+  }
+
+  &__select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: top var(--transition-2);
+  }
+  &__select-option {
+    display: block;
+    border-radius: 10px;
+    background-color: gray;
+    color: white;
+    transition: var(--transition-2);
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: red;
+      }
+    }
+
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+  }
+}

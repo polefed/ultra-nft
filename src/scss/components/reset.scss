@@ -1,0 +1,174 @@
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+// reset
+
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  // text-decoration-skip-ink: none;
+  list-style: none;
+  user-select: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: inherit;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+legend,
+menu,
+nav,
+section {
+  display: block;
+}
+
+a {
+  display: inline-block;
+  color: inherit;
+  // &:visited {
+  //   color: blue;
+  // }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+button,
+input,
+select,
+textarea,
+*::placeholder {
+  font: inherit;
+  color: inherit;
+}
+
+button,
+label,
+input[type="submit"] {
+  display: inline-block;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+label,
+select,
+input[type="radio"],
+input[type="file"],
+input[type="checkbox"],
+input[type="range"],
+summary {
+  cursor: pointer;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+textarea {
+  &::placeholder {
+    transition: var(--transition-1);
+  }
+  transition: var(--transition-1);
+  &:focus {
+    outline: 2px solid #DC5683;
+    &::placeholder {
+      color: #DC5683;
+    }
+  }
+  &::selection {
+    background-color: red;
+  }
+  caret-color: red;
+ 
+}
+
+input[type="radio"],
+input[type="checkbox"],
+select {
+  appearance: none;
+}
+
+textarea {
+  padding: 10px;
+  resize: none;
+  &::-webkit-scrollbar {
+    width: 10px;
+    background-color: gray;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: brown;
+    border-radius: 10px;
+    transition: background-color var(--transition-1);
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: red;
+      }
+    }
+  }
+}
+
+input[type="search"] {
+  &::-webkit-search-cancel-button {
+    transition: var(--transition-1);
+    appearance: none;
+    cursor: pointer;
+    height: 8px;
+    width: 8px;
+    padding: 2px;
+    margin-left: 10px;
+    background-color: white;
+    clip-path:  polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+    // background: var(--cross);
+    @media (any-hover: hover) {
+    &:hover {
+    background-color: red;
+    }
+    }
+  }
+}
+
+input[type="text"],
+textarea {
+  &::placeholder {
+  }
+  &:valid {
+  }
+  &:invalid {
+  }
+  &:not(:focus):invalid {
+  }
+}
+
+::selection {
+}
+
+:focus {
+  outline: 0;
+}
+
+section {
+}

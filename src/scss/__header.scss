@@ -1,0 +1,75 @@
+.header {
+  // position: relative;
+  transition: position var(--transition-2), top var(--transition-2),
+    background-color var(--transition-2);
+
+  &__container {
+    font: var(--font-2);
+    position: relative;
+    display: flex;
+    gap: 3.2rem;
+    align-items: center;
+    justify-content: space-between;
+    // flex-wrap: wrap;
+    min-height: 10rem;
+    padding: 10px;
+    // overflow: hidden;
+  }
+  &__logo {
+    span {
+      @media (max-width: 992px) {
+        display: none;
+      }
+    }
+  }
+}
+
+
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+// ===================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+#fixedSwitch {
+  display: none;
+  &:checked ~ header .fixed-button {
+    background: var(--color-3);
+    // opacity: 1;
+  }
+  &:checked ~ header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: rgba(#000, 0.9);
+  }
+}
+
+.fixed-button {
+  // position: absolute;
+  position: fixed;
+  z-index: 9;
+  // bottom: -15px;
+  bottom: 10px;
+  left: 10px;
+  // width: 50px;
+  // height: 50px;
+  background: var(--color-4);
+  border-radius: 10px;
+  // display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  transition: var(--transition-1);
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 1;
+    }
+  }
+  opacity: 0.5;
+  svg {
+    flex: 0 0 15px;
+    height: 15px;
+  }
+  // @media (min-width:1201px) {
+  //   display: none;
+  // }
+}
