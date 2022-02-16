@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Описание страницы сайта." />
+  <link rel="icon" href="data:;base64,=">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css?_v=20220216202300" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20220216202300">
+  <title>ULTRA NFT</title>
+</head>
+
+<body>
+
+  <button class="scroll-up">
+  <svg class="scroll-up__svg" viewBox="-2 -2 52 52">
+    <path class="scroll-up__svg-path" d="
+        M24,0
+        a24,24 0 0,1 0,48
+        a24,24 0 0,1 0,-48
+      " />
+  </svg>
+</button>
+  <input id="fixedSwitch" type="checkbox">
+<header class="header">
+  <label class="fixed-button" for="fixedSwitch" data-display="flex">
+    
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+      <g><path fill="white" d="M296.1,9.5l12.6,19.6c28.8,45,24.5,99.1,20.6,123.1c155.1,133.9,266.6,228.7,296.1,251.9c96.6-43.2,209.4-50.2,310.6-19.2l29.8,9.1L692.9,666.9L990,964l-26.5,26.5L666.3,693.4L393.5,966.3l-9.1-29.8c-31.6-102.9-24.7-212.8,19.2-310.6c-23.2-29.6-118.3-141.4-252.5-296.8c-10.2,1-20.2,1.6-29.9,1.6c-60.2,0-89.9-19.9-93.1-22.2L10,295.6L296.1,9.5L296.1,9.5z"/></g>
+      </svg>
+      <span>Menu</span>
+  </label>
+  <div class="header__container">
+    <a class="logo header__logo" href="#">
+      <img src="img/logo-nft.svg" width="64" height="64" loading="lazy" alt="logo">
+      <span>Ultra NFT</span>
+    </a>
+    <div class="search">
+      <input id="searchSwitch" type="checkbox">
+      <label for="searchSwitch" class="search__icon">
+        <svg class="search__icon-svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M14.2939 12.5786H13.3905L13.0703 12.2699C14.191 10.9663 14.8656 9.27388 14.8656 7.43282C14.8656 3.32762 11.538 0 7.43282 0C3.32762 0 0 3.32762 0 7.43282C0 11.538 3.32762 14.8656 7.43282 14.8656C9.27388 14.8656 10.9663 14.191 12.2699 13.0703L12.5786 13.3905V14.2939L18.2962 20L20 18.2962L14.2939 12.5786ZM7.43282 12.5786C4.58548 12.5786 2.28702 10.2802 2.28702 7.43282C2.28702 4.58548 4.58548 2.28702 7.43282 2.28702C10.2802 2.28702 12.5786 4.58548 12.5786 7.43282C12.5786 10.2802 10.2802 12.5786 7.43282 12.5786Z"
+            fill="white" />
+        </svg>
+      </label>
+      <div class="search__block">
+        <input class="search__block-input" id="search" type="search" placeholder="search" required>
+        <label class="search__block-label" for="search">Search</label>
+      </div>
+      <label for="searchSwitch" class="search-overlay toggle-overlay"></label>
+    </div>
+    <input id="navigationSwitch" type="checkbox">
+    <label class="toggle-overlay navigation-overlay" for="navigationSwitch"></label>
+    <nav class="navigation">
+      <label class="navigation-close" for="navigationSwitch"></label>
+      <ul class="navigation__list">
+        <li><a href="catalog.html" target="_blank">Home</a></li>
+        <li><a href="about.html" target="_blank">Explore</a></li>
+        <li><a href="portfolio.html" target="_blank">Pages</a></li>
+        <li><a href="contacts.html" target="_blank">Contact us</a></li>
+      </ul>
+    </nav>
+
+    <button class="button-1 header-button">
+      <picture><source srcset="img/wallet-icon.webp" type="image/webp"><img src="img/wallet-icon.png" width="20" height="20" loading="lazy" alt="image"></picture>
+      <span>Connect Wallet</span>
+    </button>
+
+  </div>
+</header>
+    <section class="hero section">
+  <div class="hero__container">
+    <div class="hero__information">
+      <h1 class="hero__information-title">
+        Discover, collect, and sell extraordinary <span>NFTs</span>
+      </h1>
+      <p class="hero__information-text">NFT is the world's first and largest NFT marketplace</p>
+    
+      <div class="hero__information-buttons">
+        <button class="hero__information-button button-1">
+          <img src="img/expolre-icon.svg" width="20" height="20" loading="lazy" alt="image">
+          <span>Explore</span>
+        </button>
+        <button class="hero__information-button create-button hover-background-1">
+          <span class="create-button__icon"></span>
+          <span class="create-button__text">Create</span>
+        </button>
+      </div>
+    </div>
+    <div class="hero__media responsive-1">
+      <picture><source srcset="img/hero_image.webp" type="image/webp"><img src="img/hero_image.png" loading="lazy" width="100" height="100" alt="image"></picture>
+    </div>
+  </div>
+</section>
+    <section class="section how-section">
+  <div class="section__container">
+    <h2 class="title-1 how-title">How it Works</h2>
+    <ul class="how">
+      <li class="how__item">
+        <a class="how__image responsive-1 hover-img" href="work.html" target="_blank" >
+          <img src="img/how-icon-1.svg" loading="lazy" width="100" height="100" alt="image">
+        </a>
+        <p class="how__label">Set up your Wallet</p>
+        <p class="how__text">Once you’ve set up your wallet of choice, connect it to OpenSeaby clicking the NFT Marketplacein the top right corner.</p>
+      </li>
+      <li class="how__item">
+        <a class="how__image responsive-1 hover-img" href="work.html" target="_blank" >
+          <img src="img/how-icon-2.svg" loading="lazy" width="100" height="100" alt="image">
+        </a>
+        <p class="how__label">Create your Collection</p>
+        <p class="how__text">Click Create and set up your collection. Add social links, a description, profile & banner images, and set a secondary sales fee.</p>
+      </li>
+      <li class="how__item">
+        <a class="how__image responsive-1 hover-img" href="work.html" target="_blank" >
+          <img src="img/how-icon-3.svg" loading="lazy" width="100" height="100" alt="image">
+        </a>
+        <p class="how__label">Add your NFTs</p>
+        <p class="how__text">Upload your work (image, video, audio, or 3D art), add a title and description, and customize your NFTs with properties, stats</p>
+      </li>
+      <li class="how__item">
+        <a class="how__image responsive-1 hover-img" href="work.html" target="_blank" >
+          <img src="img/how-icon-4.svg" loading="lazy" width="100" height="100" alt="image">
+        </a>
+        <p class="how__label">List them for Sale</p>
+        <p class="how__text">Choose between auctions, fixed-price listings, and declining-price listings. You choose how you want to sell your NFTs!</p>
+      </li>
+    </ul>
+  </div>
+</section>
+    <section class="live section">
+  <div class="live__container section__top">
+    <h3 class="title-1">Live Auctions</h3>
+    <button class="button-1">
+      <img src="img/expolre-icon.svg" width="20" height="20" loading="lazy" alt="image">
+      <span>Explore All</span>
+    </button>
+  </div>
+  <div class="main-slider section__list">
+    <div class="swiper main-slider__swiper">
+      <div class="swiper-wrapper">
+  
+        <div class="swiper-slide main-slider__slide">
+            <div class="main-slider__slide-image responsive-2">
+              <picture><source srcset="img/slider-image-1.webp" type="image/webp"><img src="img/slider-image-1.jpg" loading="lazy" width="442" height="442" alt="image"></picture>
+            </div>
+            <div class="slider-top">
+              <picture><source srcset="img/slider-avatar.webp" type="image/webp"><img class="slider-top__img" src="img/slider-avatar.png" width="56" height="56" loading="lazy" alt="image"></picture>
+              <div class="slider-top__info">
+                <p class="slider-top__info-label">Metaverse</p>
+                <p class="slider-top__info-author"><span>Created by</span>John Doe</p>
+              </div>
+            </div>
+            <div class="slider-rating">
+              <div class="slider-rating__item slider-rating__heart">
+                <img class="slider-rating__item-img" src="img/heart-icon.svg" width="24" height="24" loading="lazy" alt="rating-image">
+                <p class="slider-rating__item-number">372</p>
+              </div>
+              <div class="slider-rating__item slider-rating__crown">
+                <img class="slider-rating__item-img" src="img/crown-icon.svg" width="24" height="24" loading="lazy" alt="rating-image">
+                <p class="slider-rating__item-number">1<span>/100</span></p>
+              </div>
+              <div class="slider-rating__item slider-rating__coins">
+                <img class="slider-rating__item-img" src="img/coins-icon.svg" width="24" height="24" loading="lazy" alt="rating-image">
+                <p class="slider-rating__item-number">5.00<span>ETH</span></p>
+              </div>
+            </div>
+            <div class="slider-buttons">
+              <button class="slider-button button-1">
+                <img src="img/timer-icon.svg" width="20" height="20" loading="lazy" alt="image">
+                <span>12d 13h 56m</span>
+              </button>
+              <button class="slider-button button-1">
+                <img src="img/crown-icon.svg" width="20" height="20" loading="lazy" alt="image">
+                <span>Explore</span>
+              </button>
+            </div>
+        </div>
+        <div class="swiper-slide main-slider__slide">
+          <div class="main-slider__slide-image responsive-2">
+            <picture><source srcset="img/slider-image-2.webp" type="image/webp"><img src="img/slider-image-2.jpg" loading="lazy" width="442" height="442" alt="image"></picture>
+          </div>
+          <div class="slider-top">
+            <picture><source srcset="img/slider-avatar.webp" type="image/webp"><img class="slider-top__img" src="img/slider-avatar.png" width="56" height="56" loading="lazy" alt="image"></picture>
+            <div class="slider-top__info">
+              <p class="slider-top__info-label">Metaverse</p>
+              <p class="slider-top__info-author"><span>Created by</span>John Doe</p>
+            </div>
+          </div>
+          <div class="slider-rating">
+            <div class="slider-rating__item slider-rating__heart">
+              <img class="slider-rating__item-img" src="img/heart-icon.svg" width="24" height="24" loading="lazy" alt="rating-image">
+              <p class="slider-rating__item-number">372</p>
+            </div>
+            <div class="slider-rating__item slider-rating__crown">
+              <img class="slider-rating__item-img" src="img/crown-icon.svg" width="24" height="24" loading="lazy" alt="rating-image">
+              <p class="slider-rating__item-number">1<span>/100</span></p>
+            </div>
+            <div class="slider-rating__item slider-rating__coins">
+              <img class="slider-rating__item-img" src="img/coins-icon.svg" width="24" height="24" loading="lazy" alt="rating-image">
+              <p class="slider-rating__item-number">5.00<span>ETH</span></p>
+            </div>
+          </div>
+          <div class="slider-buttons">
+            <button class="slider-button button-1">
+              <img src="img/timer-icon.svg" width="20" height="20" loading="lazy" alt="image">
+              <span>12d 13h 56m</span>
+            </button>
+            <button class="slider-button button-1">
+              <img src="img/crown-icon.svg" width="20" height="20" loading="lazy" alt="image">
+              <span>Explore</span>
+            </button>
+          </div>
+      </div>
+      <div class="swiper-slide main-slider__slide">
+        <div class="main-slider__slide-image responsive-2">
+          <picture><source srcset="img/slider-image-3.webp" type="image/webp"><img src="img/slider-image-3.jpg" loading="lazy" width="442" height="442" alt="image"></picture>
+        </div>
+        <div class="slider-top">
+          <picture><source srcset="img/slider-avatar.webp" type="image/webp"><img class="slider-top__img" src="img/slider-avatar.png" width="56" height="56" loading="lazy" alt="image"></picture>
+          <div class="slider-top__info">
+            <p class="slider-top__info-label">Metaverse</p>
+            <p class="slider-top__info-author"><span>Created by</span>John Doe</p>
+          </div>
+        </div>
+        <div class="slider-rating">
+          <div class="slider-rating__item slider-rating__heart">
+            <img class="slider-rating__item-img" src="img/heart-icon.svg" width="24" height="24" loading="lazy" alt="rating-image">
+            <p class="slider-rating__item-number">372</p>
+          </div>
+          <div class="slider-rating__item slider-rating__crown">
+            <img class="slider-rating__item-img" src="img/crown-icon.svg" width="24" height="24" loading="lazy" alt="rating-image">
+            <p class="slider-rating__item-number">1<span>/100</span></p>
+          </div>
+          <div class="slider-rating__item slider-rating__coins">
+            <img class="slider-rating__item-img" src="img/coins-icon.svg" width="24" height="24" loading="lazy" alt="rating-image">
+            <p class="slider-rating__item-number">5.00<span>ETH</span></p>
+          </div>
+        </div>
+        <div class="slider-buttons">
+          <button class="slider-button button-1">
+            <img src="img/timer-icon.svg" width="20" height="20" loading="lazy" alt="image">
+            <span>12d 13h 56m</span>
+          </button>
+          <button class="slider-button button-1">
+            <img src="img/crown-icon.svg" width="20" height="20" loading="lazy" alt="image">
+            <span>Explore</span>
+          </button>
+        </div>
+    </div>
+    <div class="swiper-slide main-slider__slide">
+      <div class="main-slider__slide-image responsive-2">
+        <picture><source srcset="img/slider-image-4.webp" type="image/webp"><img src="img/slider-image-4.jpg" loading="lazy" width="442" height="442" alt="image"></picture>
+      </div>
+      <div class="slider-top">
+        <picture><source srcset="img/slider-avatar.webp" type="image/webp"><img class="slider-top__img" src="img/slider-avatar.png" width="56" height="56" loading="lazy" alt="image"></picture>
+        <div class="slider-top__info">
+          <p class="slider-top__info-label">Metaverse</p>
+          <p class="slider-top__info-author"><span>Created by</span>John Doe</p>
+        </div>
+      </div>
+      <div class="slider-rating">
+        <div class="slider-rating__item slider-rating__heart">
+          <img class="slider-rating__item-img" src="img/heart-icon.svg" width="24" height="24" loading="lazy" alt="rating-image">
+          <p class="slider-rating__item-number">372</p>
+        </div>
+        <div class="slider-rating__item slider-rating__crown">
+          <img class="slider-rating__item-img" src="img/crown-icon.svg" width="24" height="24" loading="lazy" alt="rating-image">
+          <p class="slider-rating__item-number">1<span>/100</span></p>
+        </div>
+        <div class="slider-rating__item slider-rating__coins">
+          <img class="slider-rating__item-img" src="img/coins-icon.svg" width="24" height="24" loading="lazy" alt="rating-image">
+          <p class="slider-rating__item-number">5.00<span>ETH</span></p>
+        </div>
+      </div>
+      <div class="slider-buttons">
+        <button class="slider-button button-1">
+          <img src="img/timer-icon.svg" width="20" height="20" loading="lazy" alt="image">
+          <span>12d 13h 56m</span>
+        </button>
+        <button class="slider-button button-1">
+          <img src="img/crown-icon.svg" width="20" height="20" loading="lazy" alt="image">
+          <span>Explore</span>
+        </button>
+      </div>
+  </div>
+  <div class="swiper-slide main-slider__slide">
+    <div class="main-slider__slide-image responsive-2">
+      <picture><source srcset="img/slider-image-1.webp" type="image/webp"><img src="img/slider-image-1.jpg" loading="lazy" width="442" height="442" alt="image"></picture>
+    </div>
+    <div class="slider-top">
+      <picture><source srcset="img/slider-avatar.webp" type="image/webp"><img class="slider-top__img" src="img/slider-avatar.png" width="56" height="56" loading="lazy" alt="image"></picture>
+      <div class="slider-top__info">
+        <p class="slider-top__info-label">Metaverse</p>
+        <p class="slider-top__info-author"><span>Created by</span>John Doe</p>
+      </div>
+    </div>
+    <div class="slider-rating">
+      <div class="slider-rating__item slider-rating__heart">
+        <img class="slider-rating__item-img" src="img/heart-icon.svg" width="24" height="24" loading="lazy" alt="rating-image">
+        <p class="slider-rating__item-number">372</p>
+      </div>
+      <div class="slider-rating__item slider-rating__crown">
+        <img class="slider-rating__item-img" src="img/crown-icon.svg" width="24" height="24" loading="lazy" alt="rating-image">
+        <p class="slider-rating__item-number">1<span>/100</span></p>
+      </div>
+      <div class="slider-rating__item slider-rating__coins">
+        <img class="slider-rating__item-img" src="img/coins-icon.svg" width="24" height="24" loading="lazy" alt="rating-image">
+        <p class="slider-rating__item-number">5.00<span>ETH</span></p>
+      </div>
+    </div>
+    <div class="slider-buttons">
+      <button class="slider-button button-1">
+        <img src="img/timer-icon.svg" width="20" height="20" loading="lazy" alt="image">
+        <span>12d 13h 56m</span>
+      </button>
+      <button class="slider-button button-1">
+        <img src="img/crown-icon.svg" width="20" height="20" loading="lazy" alt="image">
+        <span>Explore</span>
+      </button>
+    </div>
+</div>
+<div class="swiper-slide main-slider__slide">
+  <div class="main-slider__slide-image responsive-2">
+    <picture><source srcset="img/slider-image-2.webp" type="image/webp"><img src="img/slider-image-2.jpg" loading="lazy" width="442" height="442" alt="image"></picture>
+  </div>
+  <div class="slider-top">
+    <picture><source srcset="img/slider-avatar.webp" type="image/webp"><img class="slider-top__img" src="img/slider-avatar.png" width="56" height="56" loading="lazy" alt="image"></picture>
+    <div class="slider-top__info">
+      <p class="slider-top__info-label">Metaverse</p>
+      <p class="slider-top__info-author"><span>Created by</span>John Doe</p>
+    </div>
+  </div>
+  <div class="slider-rating">
+    <div class="slider-rating__item slider-rating__heart">
+      <img class="slider-rating__item-img" src="img/heart-icon.svg" width="24" height="24" loading="lazy" alt="rating-image">
+      <p class="slider-rating__item-number">372</p>
+    </div>
+    <div class="slider-rating__item slider-rating__crown">
+      <img class="slider-rating__item-img" src="img/crown-icon.svg" width="24" height="24" loading="lazy" alt="rating-image">
+      <p class="slider-rating__item-number">1<span>/100</span></p>
+    </div>
+    <div class="slider-rating__item slider-rating__coins">
+      <img class="slider-rating__item-img" src="img/coins-icon.svg" width="24" height="24" loading="lazy" alt="rating-image">
+      <p class="slider-rating__item-number">5.00<span>ETH</span></p>
+    </div>
+  </div>
+  <div class="slider-buttons">
+    <button class="slider-button button-1">
+      <img src="img/timer-icon.svg" width="20" height="20" loading="lazy" alt="image">
+      <span>12d 13h 56m</span>
+    </button>
+    <button class="slider-button button-1">
+      <img src="img/crown-icon.svg" width="20" height="20" loading="lazy" alt="image">
+      <span>Explore</span>
+    </button>
+  </div>
+</div>
+  
+      </div>
+    </div>
+    <!-- <button class="slider-toggle">
+      <input class="slider-toggle__stop" name="sliderToggle" type="radio">
+      <input class="slider-toggle__play" name="sliderToggle" type="radio">
+    </button> -->
+    <div class="main-slider__pagination"></div>
+  </div>
+</section>
+    <section class="popular-section section">
+  <div class="popular-section__container">
+    <div class="section__top">
+      <h4 class="title-1">Popular Collections</h4>
+      <button class="button-1">
+        <img src="img/expolre-icon.svg" width="20" height="20" loading="lazy" alt="image">
+        <span>Explore All</span>
+      </button>
+    </div>
+    <div class="popular section__list">
+      <div class="popular__item main-slider__slide">
+        <div class="popular__item-images">
+          <div class="popular__item-image responsive-2">
+            <picture><source srcset="img/slider-image-1.webp" type="image/webp"><img src="img/slider-image-1.jpg" loading="lazy" width="155" height="155" alt="image"></picture>
+          </div>
+          <div class="popular__item-image responsive-2">
+            <picture><source srcset="img/slider-image-2.webp" type="image/webp"><img src="img/slider-image-2.jpg" loading="lazy" width="155" height="155" alt="image"></picture>
+          </div>
+          <div class="popular__item-image responsive-2">
+            <picture><source srcset="img/slider-image-3.webp" type="image/webp"><img src="img/slider-image-3.jpg" loading="lazy" width="155" height="155" alt="image"></picture>
+          </div>
+          <div class="popular__item-image responsive-2">
+            <picture><source srcset="img/slider-image-4.webp" type="image/webp"><img src="img/slider-image-4.jpg" loading="lazy" width="155" height="155" alt="image"></picture>
+          </div>
+        </div>
+      <div class="popular__item-info">
+        <div class="slider-top">
+          <picture><source srcset="img/slider-avatar.webp" type="image/webp"><img class="slider-top__img" src="img/slider-avatar.png" width="56" height="56" loading="lazy" alt="image"></picture>
+          <div class="slider-top__info">
+            <p class="slider-top__info-label">Metaverse</p>
+            <p class="slider-top__info-author"><span>Created by</span>John Doe</p>
+          </div>
+        </div>
+        <div class="slider-rating__item slider-rating__heart">
+          <img class="slider-rating__item-img" src="img/heart-icon.svg" width="24" height="24" loading="lazy" alt="rating-image">
+          <p class="slider-rating__item-number">372</p>
+        </div>
+      </div>
+    </div>
+    <div class="popular__item main-slider__slide">
+      <div class="popular__item-images">
+        <div class="popular__item-image responsive-2">
+          <picture><source srcset="img/slider-image-1.webp" type="image/webp"><img src="img/slider-image-1.jpg" loading="lazy" width="155" height="155" alt="image"></picture>
+        </div>
+        <div class="popular__item-image responsive-2">
+          <picture><source srcset="img/slider-image-2.webp" type="image/webp"><img src="img/slider-image-2.jpg" loading="lazy" width="155" height="155" alt="image"></picture>
+        </div>
+        <div class="popular__item-image responsive-2">
+          <picture><source srcset="img/slider-image-3.webp" type="image/webp"><img src="img/slider-image-3.jpg" loading="lazy" width="155" height="155" alt="image"></picture>
+        </div>
+        <div class="popular__item-image responsive-2">
+          <picture><source srcset="img/slider-image-4.webp" type="image/webp"><img src="img/slider-image-4.jpg" loading="lazy" width="155" height="155" alt="image"></picture>
+        </div>
+      </div>
+    <div class="popular__item-info">
+      <div class="slider-top">
+        <picture><source srcset="img/slider-avatar.webp" type="image/webp"><img class="slider-top__img" src="img/slider-avatar.png" width="56" height="56" loading="lazy" alt="image"></picture>
+        <div class="slider-top__info">
+          <p class="slider-top__info-label">Metaverse</p>
+          <p class="slider-top__info-author"><span>Created by</span>John Doe</p>
+        </div>
+      </div>
+      <div class="slider-rating__item slider-rating__heart">
+        <img class="slider-rating__item-img" src="img/heart-icon.svg" width="24" height="24" loading="lazy" alt="rating-image">
+        <p class="slider-rating__item-number">372</p>
+      </div>
+    </div>
+  </div>
+  <div class="popular__item main-slider__slide">
+    <div class="popular__item-images">
+      <div class="popular__item-image responsive-2">
+        <picture><source srcset="img/slider-image-1.webp" type="image/webp"><img src="img/slider-image-1.jpg" loading="lazy" width="155" height="155" alt="image"></picture>
+      </div>
+      <div class="popular__item-image responsive-2">
+        <picture><source srcset="img/slider-image-2.webp" type="image/webp"><img src="img/slider-image-2.jpg" loading="lazy" width="155" height="155" alt="image"></picture>
+      </div>
+      <div class="popular__item-image responsive-2">
+        <picture><source srcset="img/slider-image-3.webp" type="image/webp"><img src="img/slider-image-3.jpg" loading="lazy" width="155" height="155" alt="image"></picture>
+      </div>
+      <div class="popular__item-image responsive-2">
+        <picture><source srcset="img/slider-image-4.webp" type="image/webp"><img src="img/slider-image-4.jpg" loading="lazy" width="155" height="155" alt="image"></picture>
+      </div>
+    </div>
+  <div class="popular__item-info">
+    <div class="slider-top">
+      <picture><source srcset="img/slider-avatar.webp" type="image/webp"><img class="slider-top__img" src="img/slider-avatar.png" width="56" height="56" loading="lazy" alt="image"></picture>
+      <div class="slider-top__info">
+        <p class="slider-top__info-label">Metaverse</p>
+        <p class="slider-top__info-author"><span>Created by</span>John Doe</p>
+      </div>
+    </div>
+    <div class="slider-rating__item slider-rating__heart">
+      <img class="slider-rating__item-img" src="img/heart-icon.svg" width="24" height="24" loading="lazy" alt="rating-image">
+      <p class="slider-rating__item-number">372</p>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+    <section class="section top-section">
+  <div class="section__container">
+    <input id="transformTop1" class="transform-switch" type="radio" name="transformTop" checked>
+    <input id="transformTop2" class="transform-switch" type="radio" name="transformTop">
+  <div class="section__top section__top-2">
+    <h5 class="title-1">Top Sellers</h5>
+    <div class="transform-navigation">
+      <label class="transform-navigation__button transform-navigation__button-1" for="transformTop1"></label>
+      <label class="transform-navigation__button transform-navigation__button-2" for="transformTop2"></label>
+    </div>
+  </div>
+    <ul class="top section__list">
+      <li class="top__item">
+          <div class="top__item-image responsive-1">
+            <picture><source srcset="img/top-avatar.webp" type="image/webp"><img src="img/top-avatar.jpg" width="56" height="56" loading="lazy" alt="image"></picture>
+          </div>
+          <div class="top__info">
+            <p class="top__info-label">John Doe</p>
+            <p class="top__info-author">ETH 242.21</p>
+          </div>
+      </li>
+      <li class="top__item">
+        <div class="top__item-image responsive-1">
+          <picture><source srcset="img/top-avatar.webp" type="image/webp"><img src="img/top-avatar.jpg" width="56" height="56" loading="lazy" alt="image"></picture>
+        </div>
+        <div class="top__info">
+          <p class="top__info-label">John Doe</p>
+          <p class="top__info-author">ETH 242.21</p>
+        </div>
+    </li>
+    <li class="top__item">
+      <div class="top__item-image responsive-1">
+        <picture><source srcset="img/top-avatar.webp" type="image/webp"><img src="img/top-avatar.jpg" width="56" height="56" loading="lazy" alt="image"></picture>
+      </div>
+      <div class="top__info">
+        <p class="top__info-label">John Doe</p>
+        <p class="top__info-author">ETH 242.21</p>
+      </div>
+  </li>
+  <li class="top__item">
+    <div class="top__item-image responsive-1">
+      <picture><source srcset="img/top-avatar.webp" type="image/webp"><img src="img/top-avatar.jpg" width="56" height="56" loading="lazy" alt="image"></picture>
+    </div>
+    <div class="top__info">
+      <p class="top__info-label">John Doe</p>
+      <p class="top__info-author">ETH 242.21</p>
+    </div>
+</li>
+<li class="top__item">
+  <div class="top__item-image responsive-1">
+    <picture><source srcset="img/top-avatar.webp" type="image/webp"><img src="img/top-avatar.jpg" width="56" height="56" loading="lazy" alt="image"></picture>
+  </div>
+  <div class="top__info">
+    <p class="top__info-label">John Doe</p>
+    <p class="top__info-author">ETH 242.21</p>
+  </div>
+</li>
+<li class="top__item">
+  <div class="top__item-image responsive-1">
+    <picture><source srcset="img/top-avatar.webp" type="image/webp"><img src="img/top-avatar.jpg" width="56" height="56" loading="lazy" alt="image"></picture>
+  </div>
+  <div class="top__info">
+    <p class="top__info-label">John Doe</p>
+    <p class="top__info-author">ETH 242.21</p>
+  </div>
+</li>
+<li class="top__item">
+  <div class="top__item-image responsive-1">
+    <picture><source srcset="img/top-avatar.webp" type="image/webp"><img src="img/top-avatar.jpg" width="56" height="56" loading="lazy" alt="image"></picture>
+  </div>
+  <div class="top__info">
+    <p class="top__info-label">John Doe</p>
+    <p class="top__info-author">ETH 242.21</p>
+  </div>
+</li>
+<li class="top__item">
+  <div class="top__item-image responsive-1">
+    <picture><source srcset="img/top-avatar.webp" type="image/webp"><img src="img/top-avatar.jpg" width="56" height="56" loading="lazy" alt="image"></picture>
+  </div>
+  <div class="top__info">
+    <p class="top__info-label">John Doe</p>
+    <p class="top__info-author">ETH 242.21</p>
+  </div>
+</li>
+    </ul>
+  </div>
+</section>
+    <section class="section">
+  <div class="section__container">
+    <input id="transformToday1" class="transform-switch" type="radio" name="transformToday" checked>
+    <input id="transformToday2" class="transform-switch" type="radio" name="transformToday">
+  <div class="section__top section__top-2">
+    <h5 class="title-1">Today’s Picks</h5>
+    <div class="transform-navigation">
+      <label for="transformToday1"></label>
+      <label for="transformToday2"></label>
+    </div>
+  </div>
+    <div class="today section__list">
+      <div class="main-slider__slide today__item">
+        <div class="main-slider__slide-image responsive-2">
+          <picture><source srcset="img/slider-image-2.webp" type="image/webp"><img src="img/slider-image-2.jpg" loading="lazy" width="442" height="442" alt="image"></picture>
+        </div>
+        <div class="slider-top">
+          <picture><source srcset="img/slider-avatar.webp" type="image/webp"><img class="slider-top__img" src="img/slider-avatar.png" width="56" height="56" loading="lazy" alt="image"></picture>
+          <div class="slider-top__info">
+            <p class="slider-top__info-label">Metaverse</p>
+            <p class="slider-top__info-author"><span>Owned by</span>John Doe</p>
+          </div>
+        </div>
+        <div class="slider-rating today-rating">
+          <div class="slider-rating__item slider-rating__heart">
+            <img class="slider-rating__item-img" src="img/heart-icon.svg" width="24" height="24" loading="lazy" alt="rating-image">
+            <p class="slider-rating__item-number">372</p>
+          </div>
+          <div class="slider-rating__item slider-rating__coins">
+            <img class="slider-rating__item-img" src="img/coins-icon.svg" width="24" height="24" loading="lazy" alt="rating-image">
+            <p class="slider-rating__item-number">5.00<span>ETH</span></p>
+          </div>
+        </div>
+        <div class="slider-buttons">
+          <button class="slider-button button-1">
+            <img src="img/history-icon.svg" width="20" height="20" loading="lazy" alt="image">
+            <span>View History</span>
+          </button>
+          <button class="slider-button button-1">
+            <img src="img/crown-icon.svg" width="20" height="20" loading="lazy" alt="image">
+            <span>Place Bid</span>
+          </button>
+        </div>
+    </div>
+    <div class="main-slider__slide today__item">
+      <div class="main-slider__slide-image responsive-2">
+        <picture><source srcset="img/slider-image-2.webp" type="image/webp"><img src="img/slider-image-2.jpg" loading="lazy" width="442" height="442" alt="image"></picture>
+      </div>
+      <div class="slider-top">
+        <picture><source srcset="img/slider-avatar.webp" type="image/webp"><img class="slider-top__img" src="img/slider-avatar.png" width="56" height="56" loading="lazy" alt="image"></picture>
+        <div class="slider-top__info">
+          <p class="slider-top__info-label">Metaverse</p>
+          <p class="slider-top__info-author"><span>Owned by</span>John Doe</p>
+        </div>
+      </div>
+      <div class="slider-rating today-rating">
+        <div class="slider-rating__item slider-rating__heart">
+          <img class="slider-rating__item-img" src="img/heart-icon.svg" width="24" height="24" loading="lazy" alt="rating-image">
+          <p class="slider-rating__item-number">372</p>
+        </div>
+        <div class="slider-rating__item slider-rating__coins">
+          <img class="slider-rating__item-img" src="img/coins-icon.svg" width="24" height="24" loading="lazy" alt="rating-image">
+          <p class="slider-rating__item-number">5.00<span>ETH</span></p>
+        </div>
+      </div>
+      <div class="slider-buttons">
+        <button class="slider-button button-1">
+          <img src="img/history-icon.svg" width="20" height="20" loading="lazy" alt="image">
+          <span>View History</span>
+        </button>
+        <button class="slider-button button-1">
+          <img src="img/crown-icon.svg" width="20" height="20" loading="lazy" alt="image">
+          <span>Place Bid</span>
+        </button>
+      </div>
+  </div>
+  <div class="main-slider__slide today__item">
+    <div class="main-slider__slide-image responsive-2">
+      <picture><source srcset="img/slider-image-2.webp" type="image/webp"><img src="img/slider-image-2.jpg" loading="lazy" width="442" height="442" alt="image"></picture>
+    </div>
+    <div class="slider-top">
+      <picture><source srcset="img/slider-avatar.webp" type="image/webp"><img class="slider-top__img" src="img/slider-avatar.png" width="56" height="56" loading="lazy" alt="image"></picture>
+      <div class="slider-top__info">
+        <p class="slider-top__info-label">Metaverse</p>
+        <p class="slider-top__info-author"><span>Owned by</span>John Doe</p>
+      </div>
+    </div>
+    <div class="slider-rating today-rating">
+      <div class="slider-rating__item slider-rating__heart">
+        <img class="slider-rating__item-img" src="img/heart-icon.svg" width="24" height="24" loading="lazy" alt="rating-image">
+        <p class="slider-rating__item-number">372</p>
+      </div>
+      <div class="slider-rating__item slider-rating__coins">
+        <img class="slider-rating__item-img" src="img/coins-icon.svg" width="24" height="24" loading="lazy" alt="rating-image">
+        <p class="slider-rating__item-number">5.00<span>ETH</span></p>
+      </div>
+    </div>
+    <div class="slider-buttons">
+      <button class="slider-button button-1">
+        <img src="img/history-icon.svg" width="20" height="20" loading="lazy" alt="image">
+        <span>View History</span>
+      </button>
+      <button class="slider-button button-1">
+        <img src="img/crown-icon.svg" width="20" height="20" loading="lazy" alt="image">
+        <span>Place Bid</span>
+      </button>
+    </div>
+</div>
+<div class="main-slider__slide today__item">
+  <div class="main-slider__slide-image responsive-2">
+    <picture><source srcset="img/slider-image-2.webp" type="image/webp"><img src="img/slider-image-2.jpg" loading="lazy" width="442" height="442" alt="image"></picture>
+  </div>
+  <div class="slider-top">
+    <picture><source srcset="img/slider-avatar.webp" type="image/webp"><img class="slider-top__img" src="img/slider-avatar.png" width="56" height="56" loading="lazy" alt="image"></picture>
+    <div class="slider-top__info">
+      <p class="slider-top__info-label">Metaverse</p>
+      <p class="slider-top__info-author"><span>Owned by</span>John Doe</p>
+    </div>
+  </div>
+  <div class="slider-rating today-rating">
+    <div class="slider-rating__item slider-rating__heart">
+      <img class="slider-rating__item-img" src="img/heart-icon.svg" width="24" height="24" loading="lazy" alt="rating-image">
+      <p class="slider-rating__item-number">372</p>
+    </div>
+    <div class="slider-rating__item slider-rating__coins">
+      <img class="slider-rating__item-img" src="img/coins-icon.svg" width="24" height="24" loading="lazy" alt="rating-image">
+      <p class="slider-rating__item-number">5.00<span>ETH</span></p>
+    </div>
+  </div>
+  <div class="slider-buttons">
+    <button class="slider-button button-1">
+      <img src="img/history-icon.svg" width="20" height="20" loading="lazy" alt="image">
+      <span>View History</span>
+    </button>
+    <button class="slider-button button-1">
+      <img src="img/crown-icon.svg" width="20" height="20" loading="lazy" alt="image">
+      <span>Place Bid</span>
+    </button>
+  </div>
+</div>
+<div class="main-slider__slide today__item">
+  <div class="main-slider__slide-image responsive-2">
+    <picture><source srcset="img/slider-image-2.webp" type="image/webp"><img src="img/slider-image-2.jpg" loading="lazy" width="442" height="442" alt="image"></picture>
+  </div>
+  <div class="slider-top">
+    <picture><source srcset="img/slider-avatar.webp" type="image/webp"><img class="slider-top__img" src="img/slider-avatar.png" width="56" height="56" loading="lazy" alt="image"></picture>
+    <div class="slider-top__info">
+      <p class="slider-top__info-label">Metaverse</p>
+      <p class="slider-top__info-author"><span>Owned by</span>John Doe</p>
+    </div>
+  </div>
+  <div class="slider-rating today-rating">
+    <div class="slider-rating__item slider-rating__heart">
+      <img class="slider-rating__item-img" src="img/heart-icon.svg" width="24" height="24" loading="lazy" alt="rating-image">
+      <p class="slider-rating__item-number">372</p>
+    </div>
+    <div class="slider-rating__item slider-rating__coins">
+      <img class="slider-rating__item-img" src="img/coins-icon.svg" width="24" height="24" loading="lazy" alt="rating-image">
+      <p class="slider-rating__item-number">5.00<span>ETH</span></p>
+    </div>
+  </div>
+  <div class="slider-buttons">
+    <button class="slider-button button-1">
+      <img src="img/history-icon.svg" width="20" height="20" loading="lazy" alt="image">
+      <span>View History</span>
+    </button>
+    <button class="slider-button button-1">
+      <img src="img/crown-icon.svg" width="20" height="20" loading="lazy" alt="image">
+      <span>Place Bid</span>
+    </button>
+  </div>
+</div>
+<div class="main-slider__slide today__item">
+  <div class="main-slider__slide-image responsive-2">
+    <picture><source srcset="img/slider-image-2.webp" type="image/webp"><img src="img/slider-image-2.jpg" loading="lazy" width="442" height="442" alt="image"></picture>
+  </div>
+  <div class="slider-top">
+    <picture><source srcset="img/slider-avatar.webp" type="image/webp"><img class="slider-top__img" src="img/slider-avatar.png" width="56" height="56" loading="lazy" alt="image"></picture>
+    <div class="slider-top__info">
+      <p class="slider-top__info-label">Metaverse</p>
+      <p class="slider-top__info-author"><span>Owned by</span>John Doe</p>
+    </div>
+  </div>
+  <div class="slider-rating today-rating">
+    <div class="slider-rating__item slider-rating__heart">
+      <img class="slider-rating__item-img" src="img/heart-icon.svg" width="24" height="24" loading="lazy" alt="rating-image">
+      <p class="slider-rating__item-number">372</p>
+    </div>
+    <div class="slider-rating__item slider-rating__coins">
+      <img class="slider-rating__item-img" src="img/coins-icon.svg" width="24" height="24" loading="lazy" alt="rating-image">
+      <p class="slider-rating__item-number">5.00<span>ETH</span></p>
+    </div>
+  </div>
+  <div class="slider-buttons">
+    <button class="slider-button button-1">
+      <img src="img/history-icon.svg" width="20" height="20" loading="lazy" alt="image">
+      <span>View History</span>
+    </button>
+    <button class="slider-button button-1">
+      <img src="img/crown-icon.svg" width="20" height="20" loading="lazy" alt="image">
+      <span>Place Bid</span>
+    </button>
+  </div>
+</div>
+    </div>
+    <div class="today-bottom">
+      <button class="today-bottom__button button-1">
+        <img src="img/load-more-icon.svg" width="20" height="20" loading="lazy" alt="image">
+        <span>Load More</span>
+      </button>
+    </div>
+  </div>
+</section>
+    <footer class="footer section">
+  <div class="footer__container">
+    <div class="footer-column">
+      <a class="logo footer__logo" href="#">
+        <img src="img/logo-nft.svg" width="64" height="64" loading="lazy" alt="logo">
+        <span>Ultra NFT</span>
+      </a>
+      <p class="footer-column__text">
+        We ara a lorem ipsum dolor sit amet, consectetur adipiscing elit, Ut enim ad minim veniam, quis nostrud equip
+        consectetur adipiscing ex ea commodo dolor consequat
+      </p>
+      <ul class="footer-contacts">
+
+        <li class="footer-contacts__item">
+          <img src="img/phone-icon.svg" loading="lazy" alt="image">
+          <div class="footer-contacts__item-info">
+            <p>Phone</p>
+            <a href="tel:+923336527366" target="_blank" data-typing-text="+92 333 6527366">+92 333 6527366</a>
+          </div>
+        </li>
+
+        <li class="footer-contacts__item">
+          <img src="img/mail-icon.svg" loading="lazy" alt="image">
+          <div class="footer-contacts__item-info">
+            <p>Mail</p>
+            <a href="mailto:abuzer@greelogix.com" data-typing-text="abuzer@greelogix.com">abuzer@greelogix.com</a>
+          </div>
+        </li>
+
+        <li class="footer-contacts__item">
+          <img src="img/address-icon.svg" loading="lazy" alt="image">
+          <div class="footer-contacts__item-info">
+            <p>Address</p>
+            <a href="#" target="_blank" data-typing-text="N234 Johar Town, Lahore">N234 Johar Town, Lahore</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <div class="footer-column__top">
+        <div class="spoiler">
+          <input class="spoiler__switch" id="spoiler1" type="checkbox">
+          <label class="spoiler__button" for="spoiler1">About</label>
+          <ul class="spoiler__content">
+            <li><a target="_blank" href="#">About us</a></li>
+            <li><a target="_blank" href="#">Blog</a></li>
+            <li><a target="_blank" href="#">Careers</a></li>
+            <li><a target="_blank" href="#">Jobs</a></li>
+            <li><a target="_blank" href="#">In Press</a></li>
+            <li><a target="_blank" href="#">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="spoiler">
+          <input class="spoiler__switch" id="spoiler2" type="checkbox">
+          <label class="spoiler__button" for="spoiler2">Support</label>
+          <ul class="spoiler__content">
+            <li><a target="_blank" href="#">Contact us</a></li>
+            <li><a target="_blank" href="#">Online Chat</a></li>
+            <li><a target="_blank" href="#">Whatsapp</a></li>
+            <li><a target="_blank" href="#">Telegram</a></li>
+            <li><a target="_blank" href="#">Ticketing</a></li>
+            <li><a target="_blank" href="#">Call Center</a></li>
+          </ul>
+        </div>
+        <div class="spoiler">
+          <input class="spoiler__switch" id="spoiler3" type="checkbox">
+          <label class="spoiler__button" for="spoiler3">FAQ</label>
+          <ul class="spoiler__content">
+            <li><a target="_blank" href="#">Account</a></li>
+            <li><a target="_blank" href="#">Manage Deliveries</a></li>
+            <li><a target="_blank" href="#">Orders</a></li>
+            <li><a target="_blank" href="#">Payments</a></li>
+            <li><a target="_blank" href="#">Returns</a></li>
+            <li><a target="_blank" href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-column__bottom">
+        <ul class="socials">
+          <li>
+            <a class="hover-img" href="#" target="_blank">
+              <img src="img/facebook-icon.svg" width="48" height="48" loading="lazy" alt="image">
+            </a>
+          </li>
+          <li>
+            <a class="hover-img" href="#" target="_blank">
+              <img src="img/in-icon.svg" width="48" height="48" loading="lazy" alt="image">
+            </a>
+          </li>
+          <li>
+            <a class="hover-img" href="#" target="_blank">
+              <img src="img/dribble-icon.svg" width="48" height="48" loading="lazy" alt="image">
+            </a>
+          </li>
+        </ul>
+        <p>© 2012-2022, All Rights Reserved</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+    
+    
+    
+    
+    
+    <!-- <div class="main-navigation container"> -->
+      
+    <!-- </div> -->
+  
+
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js?_v=20220216202300"></script>
+  <script src="js/app.min.js?_v=20220216202300" defer></script>
+</body>
+
+</html>
