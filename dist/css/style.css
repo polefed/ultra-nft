@@ -1287,7 +1287,9 @@ body:after {
 }
 
 .slider-top {
+  flex: 1 1 auto;
   display: flex;
+  align-items: center;
   gap: 12px;
 }
 
@@ -1311,6 +1313,10 @@ body:after {
   grid-template-columns: repeat(3, 1fr);
   text-align: center;
   gap: 10px;
+}
+
+.slider-rating__item {
+  align-self: center;
 }
 
 .slider-rating__item-img {
