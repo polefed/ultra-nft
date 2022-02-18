@@ -7,8 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Описание страницы сайта." />
   <link rel="icon" href="data:;base64,=">
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css?_v=20220217204040" />
-  <link rel="stylesheet" href="css/style.min.css?_v=20220217204040">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css?_v=20220218165329" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20220218165329">
   <title>ULTRA NFT</title>
 </head>
 
@@ -98,8 +98,17 @@
 </section>
     <section class="section how-section">
   <div class="section__container">
-    <h2 class="title-1 how-title">How it Works</h2>
-    <ul class="how">
+    <input id="transformHow1" class="transform-switch" type="radio" name="transformHow" checked>
+    <input id="transformHow2" class="transform-switch" type="radio" name="transformHow">
+    <!-- <h2 class="title-1 how-title">How it Works</h2> -->
+    <div class="section__top section__top-2">
+      <h5 class="title-1">How it Works</h5>
+      <div class="transform-navigation">
+        <label class="transform-navigation__button transform-navigation__button-1" for="transformHow1"></label>
+        <label class="transform-navigation__button transform-navigation__button-2" for="transformHow2"></label>
+      </div>
+    </div>
+    <ul class="how section__list">
       <li class="how__item">
         <a class="how__image responsive-1 hover-img" href="work.html" target="_blank" >
           <img src="img/how-icon-1.svg" loading="lazy" width="100" height="100" alt="image">
@@ -912,8 +921,8 @@
     <!-- </div> -->
   
 
-  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js?_v=20220217204040"></script>
-  <script src="js/app.min.js?_v=20220217204040" defer></script>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js?_v=20220218165329"></script>
+  <script src="js/app.min.js?_v=20220218165329" defer></script>
 </body>
 
 </html>

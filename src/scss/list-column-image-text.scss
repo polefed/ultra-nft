@@ -5,11 +5,11 @@
 .how-section {
 
 }
-.how-title {
-  margin-bottom: 5.6rem;
-}
+// .how-title {
+//   margin-bottom: 5.6rem;
+// }
 .how {
-  
+  padding: 10px 0;
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
   gap: 20px;
@@ -18,22 +18,20 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    // justify-content: space-between;
   }
   &__image {
-    flex: 0 0 80px;
-    height: 80px;
-    margin-bottom: 24px;
+    flex: 0 0 8rem;
+    height: 8rem;
+    margin-bottom: 2.4rem;
     border-radius: 50%;
-    position: sticky;
-    // z-index: -1;
-    top: 20px;
   }
 
   &__label,
   &__text {
-    position: relative;
-    z-index: 1;
-    background-color: var(--color-12);
+    // position: relative;
+    // z-index: 1;
+    // background-color: var(--color-12);
   }
   &__label {
     margin-bottom: 4px;

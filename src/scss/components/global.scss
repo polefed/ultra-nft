@@ -89,6 +89,12 @@ body {
       gap: 8px;
       font: var(--font-6);
       padding: 2rem 5.8rem;
+      @media (max-width: 768px) {
+        padding: 10px;
+      }
+    }
+    @media (max-width: 768px) {
+      margin: 0 auto 4rem auto;
     }
   }
   &__top-2 {
@@ -98,6 +104,8 @@ body {
   }
   &__list {
     background-color: var(--color-12);
+    border-radius: 10px;
+    // background-color: rgba(#000, 0.8);
     position: relative;
     z-index: 1;
   }
