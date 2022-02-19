@@ -2050,7 +2050,8 @@ body:after {
     display: none;
   }
 
-  .transform-switch:nth-child(1):checked ~ .top .top__item {
+  .transform-switch:nth-child(1):checked ~ .top .top__item,
+  .transform-switch:nth-child(1):checked ~ .how .how__item {
     flex: 0 0 100%;
   }
 }
