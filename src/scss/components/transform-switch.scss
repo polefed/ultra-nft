@@ -46,7 +46,8 @@
       }
     }
     @media (max-width: 480px) {
-      &:checked ~ .top .top__item {
+      &:checked ~ .top .top__item,
+      &:checked ~ .how .how__item {
         flex: 0 0 100%;
       }
     }
